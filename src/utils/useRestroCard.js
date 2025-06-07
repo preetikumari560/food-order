@@ -10,7 +10,7 @@ import { useState, useEffect } from "react"
 
 
  const apiData=async()=>{
- const data= await fetch("https://thingproxy.freeboard.io/fetch/https://www.eatsure.com/v1/api/get_restaurants?")
+ const data= await fetch("https://food-order-backend-0ulx.onrender.com/api/restaurants")
  const jsonData= await data.json()
  return jsonData?.data?.data
  }
@@ -66,14 +66,14 @@ setSearchValue(e.target.value)
 
 function vegClicker(){
 
-const data1= data.filter((item)=>item.slug.includes("veg"))
+const data1= copyData.filter((item)=>item.slug.includes("veg"))
 setDummyData(data1)
 console.log(data1)
 }
 
 function nonVegClicker(){
 
-const data1= data.filter((item)=>item.slug.includes("icken"))
+const data1= copyData.filter((item)=>item.slug.includes("icken"))
 setDummyData(data1)
 console.log(data1)
 }

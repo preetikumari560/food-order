@@ -10,11 +10,11 @@ import BackToTopButton from "./BackToTopButton"
 
  return data.length===0? <Shimmer/>: (
 
-<div  className="cardContainer" >
+<div  className="cardContainer w-10/12 flex flex-row flex-wrap  justify-center" >
 
  {data?.filter(item => item?.banner_image_es).map((item) => (
   <Link to={`/restaurant/${item?.brand_id}` } key={item?.brand_id}  state={{ restroDetails: item }} >
-    <RestroCard tata={item}  id={"restroCard"} style={{backgroundColor:"#D3D3D3"}} />
+    <RestroCard tata={item}  id={"restroCard"}  />
   </Link>
 ))}
   <BackToTopButton/>

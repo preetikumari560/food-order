@@ -15,12 +15,16 @@
 
    return (
   
-  <div>
+  <div className="">
+ <SearchBar value={searchValue}  onChange={searchBar}/>
+  <div className="flex flex-row">
+  <div className="w-2/12 flex flex-col items-center">
   <Filter onClick={vegClicker} name={"Veg"}/>
    <Filter onClick={nonVegClicker} name={"Non-Veg"}/>
     <Filter onClick={clearFilter} name={"Clear-filter"}/>
+    </div>
 
-  <SearchBar value={searchValue}  onChange={searchBar}/>
+ 
 {/* 
   <SearchBar value={customer.name} onChange={(e)=>{console.log(e.target.value)
   
@@ -28,8 +32,8 @@
   name:e.target.value})
   }}/> */}
 
-  <CardContainer data={data}/>
-
+  <CardContainer data={data} className =" "/>
+</div>
   </div>
   )
    }

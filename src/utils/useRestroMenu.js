@@ -30,8 +30,8 @@ import { useEffect, useState } from "react"
  },[resId],data)
 
         const apiCall=async()=>{
-        
-        const calledData= await fetch(`https://thingproxy.freeboard.io/fetch/https://www.eatsure.com/v1/api/get_all_products/brand_id/${resId}/store_id/10172/source_id/12`)
+        //api from food-order-backend , deployed on 
+        const calledData= await fetch(`https://food-order-backend-0ulx.onrender.com/api/menu/${resId}`)
 
         const jsonData= await calledData.json()
         return jsonData?.data?.collections

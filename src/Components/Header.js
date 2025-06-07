@@ -3,9 +3,9 @@
   
   const Header= ()=>(
   
-  <div>
+
         <NavBar/>
-  </div>
+  
   
   
   )
