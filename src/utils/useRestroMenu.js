@@ -27,7 +27,7 @@ import { useEffect, useState } from "react"
         console.log(error)
         }
 
- },[resId],data)
+ },[resId])
 
         const apiCall=async()=>{
         //api from food-order-backend , deployed on 
@@ -61,7 +61,7 @@ function nonVegClicker() {
   setData(filtered)
 }
 
- return [data,vegClicker,nonVegClicker, clearClicker]
+ return [data,vegClicker,nonVegClicker, clearClicker,originalData]
 
  }
 

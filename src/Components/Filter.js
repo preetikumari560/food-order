@@ -4,7 +4,7 @@
  
  return (
  
-<button className=" w-[200px] mt-8     bg-gradient-to-r from-black via-[#7A4227] to-[#B87333]
+<button className=" lg:w-[200px] mt-8 mx-2.5   md:w-[150px]  bg-gradient-to-r from-black via-[#7A4227] to-[#B87333]
     text-white font-semibold
     px-6 py-2 rounded-md
     shadow-lg shadow-black/70

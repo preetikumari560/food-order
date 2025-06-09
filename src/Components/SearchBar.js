@@ -4,7 +4,7 @@
 
  return(
 <div className="flex justify-center">
-<input  className="m-10 w-3/12 
+<input  className="m-10 w-[300px]
                border-0 border-b-2 border-[#B87333] 
                focus:outline-none focus:ring-0 
                text-center font-semibold text-gray-400 text-xl 

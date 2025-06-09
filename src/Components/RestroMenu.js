@@ -31,7 +31,7 @@ dispatch(deleteItem(data))
 
  const restroInfo= useDataLocation() //for  receiving passed data by link tag
 
-const [data, vegClicker,nonVegClicker,clearClicker]= useRestroMenu(resId) //Custom hook to receive data from API
+const [data, vegClicker,nonVegClicker,clearClicker,originalData]= useRestroMenu(resId) //Custom hook to receive data from API
 
  return (
  <div >
@@ -46,7 +46,7 @@ const [data, vegClicker,nonVegClicker,clearClicker]= useRestroMenu(resId) //Cust
 </div>
 <div className="menuBody flex mt-14 ">
  <div  className="flex flex-col w-4/12">
- {data?.map((item)=>{
+ {originalData?.map((item)=>{
  return(
 
  <a href={`#card-${item.collection_id}`}  key={item.collection_id}>
@@ -58,14 +58,14 @@ const [data, vegClicker,nonVegClicker,clearClicker]= useRestroMenu(resId) //Cust
 </div>
 
 
-<div className="flex  flex-col w-8/12 flex-wrap">
+<div className="flex  flex-col w-8/12 flex-wrap ">
  {data?.map((item)=>{
 {console.log(item)}
- return(<div className="  flex flex-col   " key={item.collection_id}  id={`card-${item.collection_id}`}>
+ return(<div className="  flex flex-col    " key={item.collection_id}  id={`card-${item.collection_id}`}>
 
- <h2 className="mb-12 text-xl bold font-bold">{item.collection_name}</h2>
+ <h2 className="mb-12 text-xl bold font-bold sm:self-center lg:self-start ">{item.collection_name}</h2>
 
- <div className=" flex flex-row flex-wrap   ">
+ <div className=" flex flex-row flex-wrap  sm:justify-center  lg:justify-start">
 
  {item?.products?.map((ele)=>{
    const itemInCart = cartItems.find((item) => item.product_id === ele.product_id);
